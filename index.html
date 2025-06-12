@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zach's Birthday RSVP</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     body {
       font-family: 'Arial Rounded MT Bold', sans-serif;
@@ -55,12 +56,21 @@
       display: block;
       border-radius: 12px;
     }
+    .flyer {
+      max-width: 90%;
+      height: auto;
+      margin: 2rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 <body>
   <header>
     Zach's Pool Party RSVP
   </header>
+
+  <img class="flyer" src="flyer.png" alt="Zach's Birthday Flyer" />
 
   <p class="countdown" id="countdown"></p>
 
@@ -70,7 +80,7 @@
      📍 Private Location — RSVP for address<br>
      📅 RSVP by July 15th</p>
 
-  <form action="https://formsubmit.co/zprice720@gmail.com" method="POST">
+  <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
     <input type="text" name="Name" placeholder="Your name" required />
     <input type="email" name="Email" placeholder="Your email" required />
     <input type="number" name="Age" placeholder="Your age" required />
@@ -79,7 +89,11 @@
     <button type="submit">RSVP</button>
   </form>
 
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.178592791499!2d-73.55924052336677!3d41.08694437133962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2a1802d0a262d%3A0x241475c4f2a0eb3e!2s9%20Clorinda%20Ct%2C%20Stamford%2C%20CT%2006902!5e0!3m2!1sen!2sus!4v1749688656224!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095043!2d144.95592831531734!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f3f23e1f%3A0x5045675218ce6e0!2sSecret%20Party%20Location!5e0!3m2!1sen!2sus!4v1614721373795!5m2!1sen!2sus"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
 
   <script>
     const eventDate = new Date("2025-07-20T12:00:00").getTime();
