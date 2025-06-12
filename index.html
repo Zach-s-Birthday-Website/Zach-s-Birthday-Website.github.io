@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zach's Birthday RSVP</title>
+  <style>
+    body {
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background: linear-gradient(to bottom right, #fdf6e3, #d0f0fd);
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #4fc3f7;
+      padding: 1.5rem;
+      color: white;
+      font-size: 2rem;
+    }
+    .countdown {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+    form {
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    form input, form textarea {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    form button {
+      background: #4fc3f7;
+      color: white;
+      border: none;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    iframe {
+      border: 0;
+      width: 90%;
+      height: 300px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Zach's Pool Party RSVP
+  </header>
+
+  <p class="countdown" id="countdown"></p>
+
+  <p><strong>🎉 July 20th, 12–3 PM</strong> (stay later if you want!)<br>
+     💦 Bring a bathing suit!<br>
+     👧 Ages up to 12–13<br>
+     📍 Private Location — RSVP for address<br>
+     📅 RSVP by July 15th</p>
+
+  <form action="https://formsubmit.co/zprice720@gmail.com" method="POST">
+    <input type="text" name="Name" placeholder="Your name" required />
+    <input type="email" name="Email" placeholder="Your email" required />
+    <input type="number" name="Age" placeholder="Your age" required />
+    <input type="text" name="GuestCount" placeholder="How many guests?" />
+    <textarea name="Notes" placeholder="Anything we should know?"></textarea>
+    <button type="submit">RSVP</button>
+  </form>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345095043!2d144.95592831531734!3d-37.81720997975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f3f23e1f%3A0x5045675218ce6e0!2sSecret%20Party%20Location!5e0!3m2!1sen!2sus!4v1614721373795!5m2!1sen!2sus"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
+
+  <script>
+    const eventDate = new Date("2025-07-20T12:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerHTML = `Countdown: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
+</html>
