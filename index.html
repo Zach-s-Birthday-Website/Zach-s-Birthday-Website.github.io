@@ -48,9 +48,16 @@
       border-radius: 8px;
       cursor: pointer;
     }
-   
+    iframe {
+      border: 0;
+      width: 90%;
+      height: 300px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 12px;
+    }
     .flyer {
-      max-width: 60%;
+      max-width: 40%;
       height: auto;
       margin: 2rem auto;
       border-radius: 12px;
@@ -63,17 +70,17 @@
     Zach's Pool Party RSVP
   </header>
 
-  <img class="flyer" src="flyer.png" alt="Zach's Birthday Flyer" />
+  <img class="flyer" src="flyer-small-updated.png" alt="Zach's Birthday Flyer" />
 
   <p class="countdown" id="countdown"></p>
 
-  <p><strong>🎉 July 20th, 12–3 PM</strong> (stay later if you want!)<br>
+  <p><strong>🎉 July 20th, 2–5 PM</strong> (you can hang out longer if you'd like!)<br>
      💦 Bring a bathing suit!<br>
      👧 Ages up to 12–13<br>
      📍 Private Location — RSVP for address<br>
      📅 RSVP by July 15th</p>
 
-  <form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST">
+  <form action="https://formsubmit.co/zprice720@gmail.com" method="POST">
     <input type="text" name="Name" placeholder="Your name" required />
     <input type="email" name="Email" placeholder="Your email" required />
     <input type="number" name="Age" placeholder="Your age" required />
@@ -82,10 +89,14 @@
     <button type="submit">RSVP</button>
   </form>
 
- 
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.8260121538077!2d-73.55598218423645!3d41.04142132892815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2a13920f88887%3A0xd65c60f8931efb25!2s9%20Clorinda%20Ct%2C%20Stamford%2C%20CT%2006902%2C%20USA!5e0!3m2!1sen!2sus!4v1718135070000!5m2!1sen!2sus"
+    allowfullscreen=""
+    loading="lazy"
+  ></iframe>
 
   <script>
-    const eventDate = new Date("2025-07-20T12:00:00").getTime();
+    const eventDate = new Date("2025-07-20T14:00:00").getTime();
     const countdownEl = document.getElementById("countdown");
     setInterval(() => {
       const now = new Date().getTime();
